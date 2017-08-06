@@ -1,0 +1,36 @@
+import sys
+
+
+n,k = input().strip().split(' ')
+n,k = [int(n),int(k)]
+c = [int(c_temp) for c_temp in input().strip().split(' ')]
+E = 100
+for i in range(0,len(c),k):
+    if i == 0: continue
+    E -= 1
+    if c[i] == 0:
+        E -= 2
+    print(i,c[i],E)
+if c[0] == 0:
+    E -= 3
+else: E -=1
+print(E)
+
+
+'''
+8 2
+0 0 1 0 0 1 1 0
+
+92
+
+
+24 3
+0 1 1 0 1 0 1 1 0 1 1 0 0 0 0 0 1 1 1 1 1 0 1 0
+
+86
+
+
+19 19
+1 1 0 1 0 1 0 1 0 1 0 1 1 0 1 1 1 1 1
+97
+'''

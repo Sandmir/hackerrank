@@ -1,0 +1,28 @@
+def ransom_note(magazine, rasom):
+    temp_word = {}
+    for i in magazine:
+        temp_word[i] = temp_word.get(i,0) + 1
+    for i in ransom:
+        temp_word[i] = temp_word.get(i,0) - 1
+    for i in temp_word.values():
+        if i < 0:
+            return False
+
+    return True
+    '''
+    for i in ransom:
+        if i not in magazine:
+            return False
+        else:
+            magazine.remove(i)
+    return True
+    '''
+m, n = map(int, input().strip().split(' '))
+magazine = input().strip().split(' ')
+ransom = input().strip().split(' ')
+answer = ransom_note(magazine, ransom)
+if(answer):
+    print("Yes")
+else:
+    print("No")
+

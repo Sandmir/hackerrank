@@ -1,0 +1,9 @@
+n = int(input())
+s = set(map(int, input().split()))
+
+Customer = (list(map(int, input().split(" "))) for _ in range(N))
+
+
+
+n,m = input().split(" ")
+n,m = int(n),int(m)
